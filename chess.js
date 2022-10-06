@@ -166,3 +166,20 @@ document.querySelectorAll('.box').forEach(item => {
 
                     }
                 }
+
+               if (tog % 2 == 0 && aup > 100) {
+
+                    if (document.getElementById(`b${a - 100}`).innerText.length == 0) {
+                        document.getElementById(`b${a - 100}`).style.backgroundColor = 'green'
+                    }
+                    if (aside < 8 && document.getElementById(`b${a - 100 + 1}`).innerText.length !== 0) {
+                        document.getElementById(`b${a - 100 + 1}`).style.backgroundColor = 'green'
+                    }
+                    if (aside > 1 && document.getElementById(`b${a - 100 - 1}`).innerText.length !== 0) {
+                        document.getElementById(`b${a - 100 - 1}`).style.backgroundColor = 'green'
+
+                    }
+                }
+
+
+            }
