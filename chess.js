@@ -130,3 +130,12 @@ document.querySelectorAll('.box').forEach(item => {
             })
         }
 
+
+
+        getId = item.id
+        arr = Array.from(getId)
+        arr.shift()
+        aside = eval(arr.pop())
+        arr.push('0')
+        aup = eval(arr.join(''))
+        a = aside + aup
