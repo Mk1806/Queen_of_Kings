@@ -47,3 +47,32 @@ function coloring() {
     })
 }
 coloring()
+
+
+
+// To red the same team element
+
+function reddish() {
+    document.querySelectorAll('.box').forEach(i1 => {
+        if (i1.style.backgroundColor == 'pink') {
+
+            document.querySelectorAll('.box').forEach(i2 => {
+
+                if (i2.style.backgroundColor == 'green' && i2.innerText.length !== 0) {
+
+
+                    greenText = i2.innerText
+
+                    pinkText = i1.innerText
+
+                    pinkColor = ((Array.from(pinkText)).shift()).toString()
+                    greenColor = ((Array.from(greenText)).shift()).toString()
+
+                    if (pinkColor == greenColor) {
+                        i2.style.backgroundColor = 'rgb(253, 60, 60)'
+                    }
+                }
+            })
+        }
+    })
+}
