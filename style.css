@@ -40,8 +40,40 @@ li {
 }
 
 
-.alling {
+.allimg {
     width: 45px;
     position: relative;
     bottom: 5px;
+}
+
+.allpawn {
+    transform: scale(.7);
+}
+
+.authcont {
+    width: 100vw;
+}
+
+.author {
+    float: right;
+    margin-right: 50px;
+
+}
+
+
+@media (max-width:650px) {
+
+    #tog {
+        margin-bottom: 70px;
+
+    }
+
+    .box {
+        width: 11vw;
+        height: 11vw;
+    }
+
+    .allimg {
+        width: 7vw;
+    }
 }
