@@ -76,3 +76,57 @@ function reddish() {
         }
     })
 }
+
+
+
+
+
+
+
+
+
+
+tog = 1
+
+document.querySelectorAll('.box').forEach(item => {
+
+
+
+    item.addEventListener('click', function () {
+
+        // To delete the opposite element
+
+        if (item.style.backgroundColor == 'green' && item.innerText.length == 0) {
+            tog = tog + 1
+        }
+
+        else if (item.style.backgroundColor == 'green' && item.innerText.length !== 0) {
+
+            document.querySelectorAll('.box').forEach(i => {
+                if (i.style.backgroundColor == 'pink') {
+                    pinkId = i.id
+                    pinkText = i.innerText
+
+                    // greenText = item.innerText
+
+                    // pinkColor = ((Array.from(pinkText)).shift()).toString()
+                    // greenColor = ((Array.from(greenText)).shift()).toString()
+
+
+                    // if (pinkColor !== greenColor) {
+
+                    document.getElementById(pinkId).innerText = ''
+                    item.innerText = pinkText
+                    // pinkText=''
+                    coloring()
+                    insertImage()
+                    tog = tog + 1
+                    // }
+                    // else {
+                    //     coloring()
+                    //     alert('You cant defeat your own player')
+                    // }
+                }
+            })
+        }
+
