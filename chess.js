@@ -523,3 +523,34 @@ document.querySelectorAll('.box').forEach(item => {
 
 
 
+
+
+// Moving the element
+document.querySelectorAll('.box').forEach(hathiTest => {
+
+    hathiTest.addEventListener('click', function () {
+
+        if (hathiTest.style.backgroundColor == 'pink') {
+
+            pinkId = hathiTest.id
+            pinkText = hathiTest.innerText
+
+            document.querySelectorAll('.box').forEach(hathiTest2 => {
+
+                hathiTest2.addEventListener('click', function () {
+                    if (hathiTest2.style.backgroundColor == 'green' && hathiTest2.innerText.length == 0) {
+                        document.getElementById(pinkId).innerText = ''
+                        hathiTest2.innerText = pinkText
+                        coloring()
+                        insertImage()
+
+                    }
+
+                })
+            })
+
+        }
+
+    })
+
+})
